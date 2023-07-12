@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.blogCard{
+    @apply w-96 h-80 flex justify-center items-center rounded mb-32 shadow-lg bg-BlogBG bg-center bg-cover bg-no-repeat
+}
+.photoCard{
+    @apply w-96 h-80 flex justify-center items-center rounded mb-32 shadow-lg bg-PhotoBG bg-center bg-cover bg-no-repeat
+}

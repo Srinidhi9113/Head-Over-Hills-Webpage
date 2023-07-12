@@ -13,11 +13,11 @@ export default function PopularBlogs() {
     scrollList.scrollBy(-400,0)
   }
   return (
-    <div>
-      <h1 className='text-2xl text-gray-600 text-left ml-10 mb-5'>Popular Blogs</h1>
-      <div className='flex'>
+    <div className='bg-WaveBG-Bottom bg-top bg-no-repeat bg-cover'>
+      <h1 className='text-2xl text-slate-200 text-left ml-10 py-10'>Popular Blogs</h1>
+      <div className='flex pb-12 justify-around'>
       <ChevronLeft onClick={scrollLeft}/>
-      <div id="scrollList" className='flex overflow-auto py-12 scrollbar-none scroll-smooth'>
+      <div id="scrollList" className='flex overflow-auto py-10 scrollbar-none scroll-smooth'>
         <BlogCard/>
         <BlogCard/>
         <BlogCard/>

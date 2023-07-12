@@ -13,12 +13,11 @@ export default function PhotoAlbum() {
     scrollList.scrollBy(-400,0)
   }
   return (
-    <div>
+    <div className='bg-bgColor'>
       <h1 className='text-2xl text-gray-600 text-left ml-10 mb-5'>Photo Albums</h1>
-      <div className='flex'>
+      <div className='flex justify-around'>
       <ChevronLeft onClick={scrollLeft}/>
       <div id="photoList" className='flex overflow-auto py-12 scrollbar-none scroll-smooth'>
-        <PhotoCard/>
         <PhotoCard/>
         <PhotoCard/>
         <PhotoCard/>
