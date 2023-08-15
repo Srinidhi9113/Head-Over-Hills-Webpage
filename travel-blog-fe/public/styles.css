@@ -8,3 +8,6 @@
 .photoCard{
     @apply w-96 h-80 flex justify-center items-center rounded mb-32 shadow-lg bg-PhotoBG bg-center bg-cover bg-no-repeat
 }
+.underLine{
+    @apply after:content-[''] after:block after:h-[2px] after:w-full after:bg-slate-700 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300
+}

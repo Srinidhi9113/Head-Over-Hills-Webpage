@@ -2,6 +2,7 @@ import React from 'react'
 import PhotoCard from './photo-card'
 import ChevronRight from '../../assets/icons/chevronRight'
 import ChevronLeft from '../../assets/icons/chevronLeft'
+import {motion} from 'framer-motion'
 
 export default function PhotoAlbum() {
   const scrollRight = ()=>{
@@ -14,8 +15,29 @@ export default function PhotoAlbum() {
   }
   return (
     <div className='bg-bgColor'>
-      <h1 className='text-2xl text-gray-600 text-left ml-10 mb-5'>Photo Albums</h1>
-      <div className='flex justify-around'>
+      <motion.h1 className='text-3xl text-gray-600 text-left ml-10 mb-5'
+      initial={{
+        opacity:0
+      }}
+      whileInView={{
+        opacity:1
+      }}
+      transition={{
+        delay:0.4
+      }}
+      >Photo Albums</motion.h1>
+      <motion.div className='flex justify-around'
+       initial={{
+        opacity:0,
+        y:-50
+      }}
+      whileInView={{
+        opacity:1,
+        y:0
+      }}
+      transition={{
+        delay:0.7
+      }}>
       <ChevronLeft onClick={scrollLeft}/>
       <div id="photoList" className='flex overflow-auto py-12 scrollbar-none scroll-smooth'>
         <PhotoCard/>
@@ -23,7 +45,7 @@ export default function PhotoAlbum() {
         <PhotoCard/>
       </div>
       <ChevronRight onClick={scrollRight}/>
-      </div>
+      </motion.div>
     </div>
   )
 }
